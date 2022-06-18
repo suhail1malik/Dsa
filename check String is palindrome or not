@@ -1,0 +1,12 @@
+bool recursivePalindrome(int l,int r, string &s){
+    
+     if(l>=r) return true;
+    if(s[l]!=s[r]) return false;
+    recursivePalindrome(l+1, r-1, s);
+}
+bool isPalindrome(string &s)
+{
+	// Write your code here.
+    return recursivePalindrome(0,s.size()-1,s);
+    
+}
